@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Chat from '../components/Chat.svelte';
+const token = import.meta.env.TOKEN;
+---
+
+<Layout title="chatbot">
+  <div class="mt-4">
+    <Chat token={token} client:load />
+  </div>
+</Layout>
